@@ -1,33 +1,104 @@
+/* GENERAL */
 body, html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web', sans-serif;
 }
 
+/* FONDO con transparencia tipo FAZT */
 body {
-    background: linear-gradient(rgba(95, 114, 189,0.8), rgba(155,35,234,0.7)),url("img/bg.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+  background: linear-gradient(rgba(20, 0, 0, 0.6), rgba(80, 0, 0, 0.6)),
+              url("img/ferrari_fondo.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  color: #fff;
 }
 
+/* LOGO FERRARI */
 .logo {
-    height: 40px;
-    margin-top: 20px;
+  height: 80px;
+  margin-left: 15px;
+  filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.6));
 }
 
+/* TITULO */
+.titulo {
+  color: #ff2e2e;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* TEXTO */
 .text-description {
-    letter-spacing: 2px;
-    font-family: sans-serif;    
+  color: #eee;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+/* FORMULARIO */
 .form-control {
-    background: transparent !important;
-    color: #fff !important;
+  background: transparent !important;
+  border: 1px solid #ff3333;
+  color: #fff !important;
+  width: 80%;
+  margin: 0 auto;
 }
 
+.form-control::placeholder {
+  color: #ddd;
+}
+
+.btn-light {
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-light:hover {
+  background: #ff3333;
+  color: #fff;
+  box-shadow: 0 0 10px #ff3333;
+}
+
+/* ICONOS */
 a .fab {
-    color: #ffc;
-    font-size: 30px;
-    margin: 0 10px;
+  color: #ff3333;
+  font-size: 30px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+a .fab:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* IMAGEN FERRARI */
+.car-img {
+  max-width: 90%;
+  filter: drop-shadow(0 0 25px rgba(255, 0, 0, 0.6));
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 2rem;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .form-control {
+    width: 100%;
+  }
+
+  .car-img {
+    margin-top: 30px;
+  }
 }
